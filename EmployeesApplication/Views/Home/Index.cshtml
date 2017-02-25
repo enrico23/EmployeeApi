@@ -1,0 +1,104 @@
+﻿<div class="jumbotron">
+    <h2>ASP.NET Web API 2 Sample Application</h2>
+    <p class="lead">Based on Microsoft Web Api Template</p>
+    <p><a href="/Help/" class="btn btn-primary btn-lg">API Help &raquo;</a></p>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+       <h3>Application features</h3>
+        <ul> 
+            <li>CRUD operations using Entity Framework implementing Microsoft Http Raccomended Standards Responses</li>
+            <li>Generic Repository Pattern with Entity Framework</li>
+            <li>Basic authentication using AuthorizationFilterAttribute</li>
+            <li>Download from a folder</li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <ul>
+            <li>text</li>
+        </ul>
+    </div>
+    
+   
+</div>
+
+
+<div class="row">
+    <p></p>
+    <hr />
+    <p></p>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <h3>Basic authentication Example</h3>
+
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <p></p>
+        <p>Use username: <b>male</b> - password: <b>male</b> to get male employees</p>
+        <p>Use username: <b>female</b> - password: <b>female</b> to get female employees</p>
+        <div class="alert alert-success">
+            <p> Username : <input type="text" id="txtUsername" /></p>
+            <p>Password : <input type="password" id="txtPassword" /></p>
+            <br /><br />
+            <input id="btnfemale" type="button" value="Try Get Employees with no authentication" />
+            <input id="btn" type="button" value="Authenticate and Get Employees" />
+            <input id="btnClear" type="button" value="Clear" />
+            <ul id="ulEmployees"></ul>
+        </div>
+    </div>
+   
+</div>
+
+
+<div class="row">
+    <p></p>
+    <hr />
+    <p></p>
+
+
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <h3>Web Api user registration </h3>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <p></p>
+        
+            <p>
+                <a href="/home/register" class="btn btn-primary">Go to Registration </a>
+            </p>
+            <p>
+                <a href="/home/login" class="btn btn-primary">Go to Login</a>
+            </p>
+        
+
+    </div>
+
+</div>
+
+<div class="row">
+    <p></p>
+    <hr />
+    <p></p>
+
+   
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h3>Download from a folder using web api </h3>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <p></p>
+            <ul>
+                <li>
+                    <a href="/api/download?path=collective_code_ownership.txt">Download collective_code_ownership.txt</a>
+                </li>
+                <li>
+                    <a href="/api/download?path=collective_code_ownership.doc">Download collective_code_ownership.doc</a>
+                </li>
+            </ul>
+
+        </div>
+    
+</div>
+
+
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app.js")"></script>
+}
