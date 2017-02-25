@@ -26,7 +26,7 @@ namespace EmployeesApplication.Services
                     case "female":
                         return this.Get(s => s.Gender.ToLower() == "female");
                     default:
-                        return null;
+                        return this.Get();
                 }
             }
             

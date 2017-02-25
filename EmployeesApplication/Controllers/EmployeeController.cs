@@ -133,10 +133,16 @@ namespace EmployeesApplication.Controllers
         {
             try
             {
+                var employees = _employee.SelectByGender(gender);
+                if (employees == null)
+                {
+                    throw new Exception();
+                }
+
+                return Request.CreateResponse(HttpStatusCode.Created, employees);
 
 
-
-                return Request.CreateResponse(HttpStatusCode.Created, "file created");
+               
 
             }
             catch (Exception ex)
