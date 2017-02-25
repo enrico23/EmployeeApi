@@ -223,11 +223,13 @@
     <Compile Include="Services\ApplicationConfiguration.cs" />
     <Compile Include="Services\BasicAuthenticationAttribute.cs" />
     <Compile Include="Services\DepartmentRepository.cs" />
+    <Compile Include="Services\DownloadService.cs" />
     <Compile Include="Services\EmployeeRespository.cs" />
     <Compile Include="Services\EmployeeSecurity.cs" />
     <Compile Include="Services\GenericRepository.cs" />
     <Compile Include="Services\IApplicationConfiguration.cs" />
     <Compile Include="Services\IDepartmentRepository.cs" />
+    <Compile Include="Services\IDownloadService.cs" />
     <Compile Include="Services\IEmployeeRespository.cs" />
     <Compile Include="Services\IGenericRepository.cs" />
     <Compile Include="Startup.cs" />

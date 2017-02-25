@@ -4,13 +4,19 @@
 
 
     $('#btnfemale').click(function () {
-
+        var uripart;
         var username = $('#txtUsername').val();
         var password = $('#txtPassword').val();
 
+        if (username) {
+            uripart = username;
+        } else {
+            uripart = 'female';
+        }
+
         $.ajax({
             type: 'GET',
-            url: 'http://localhost:45208/api/Employees/' + username + '/basic',
+            url: 'http://localhost:45208/api/Employees/'+ uripart + '/basic',
             dataType: 'json',
             
             success: function (data) {
