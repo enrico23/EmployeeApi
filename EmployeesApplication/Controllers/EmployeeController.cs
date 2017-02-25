@@ -14,14 +14,18 @@ namespace EmployeesApplication.Controllers
     public class EmployeeController : ApiController
     {
         private readonly  IEmployeeRepository _employee;
-        public EmployeeController() : this(new EmployeeRespository()) { }
-        public EmployeeController(IEmployeeRepository employee) {
+        private readonly IDownloadService _download;
+        public EmployeeController() : this(new EmployeeRespository(), new DownloadService()) { }
+        public EmployeeController(IEmployeeRepository employee, IDownloadService download)
+        {
             this._employee = employee;
+            this._download = download;
         }
 
         protected override void Dispose(bool disposing)
         {
             _employee.Dispose();
+            _download.Dispose();
             base.Dispose(disposing);
         }
 
@@ -133,13 +137,16 @@ namespace EmployeesApplication.Controllers
         {
             try
             {
-                var employees = _employee.SelectByGender(gender);
-                if (employees == null)
+                
+
+                string pdfName = "EmployeeList.pdf";
+                int result = _employee.CreatePdf(gender, pdfName);
+                if (result == 0)
                 {
                     throw new Exception();
                 }
 
-                return Request.CreateResponse(HttpStatusCode.Created, employees);
+                return _download.GetDownload(pdfName);
 
 
                

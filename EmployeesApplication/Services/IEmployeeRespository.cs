@@ -16,5 +16,7 @@ namespace EmployeesApplication.Services
         Employee EditEmployee(int Id, Employee model);
 
         int DeleteEmployee(int Id);
+
+        int CreatePdf(string gender, string path);
     }
 }
