@@ -17,7 +17,11 @@ namespace EmployeesApplication.Controllers
         public DownloadController(IDownloadService download) {
             this._download = download;
         }
-
+        protected override void Dispose(bool disposing)
+        {
+            _download.Dispose();
+            base.Dispose(disposing);
+        }
 
         // GET api/download/5
         public HttpResponseMessage Get(string path)
