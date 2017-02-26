@@ -224,18 +224,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
-    <Compile Include="Services\ApplicationConfiguration.cs" />
     <Compile Include="Services\BasicAuthenticationAttribute.cs" />
-    <Compile Include="Services\DepartmentRepository.cs" />
-    <Compile Include="Services\DownloadService.cs" />
-    <Compile Include="Services\EmployeeRespository.cs" />
     <Compile Include="Services\EmployeeSecurity.cs" />
-    <Compile Include="Services\GenericRepository.cs" />
-    <Compile Include="Services\IApplicationConfiguration.cs" />
-    <Compile Include="Services\IDepartmentRepository.cs" />
-    <Compile Include="Services\IDownloadService.cs" />
-    <Compile Include="Services\IEmployeeRespository.cs" />
-    <Compile Include="Services\IGenericRepository.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -322,6 +312,10 @@
     <ProjectReference Include="..\Employees.Models\Employees.Models.csproj">
       <Project>{20078a0e-b9fa-4bbe-97a3-85e7a9ab6c3e}</Project>
       <Name>Employees.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Employees.Services\Employees.Services.csproj">
+      <Project>{d0f4969e-71a4-468a-ae68-18ad12fb5d42}</Project>
+      <Name>Employees.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
