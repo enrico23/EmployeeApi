@@ -7,7 +7,7 @@ namespace EmployeesApplication.Controllers
     public class DownloadController : ApiController
     {
         private readonly IDownloadService _download;
-        public DownloadController() : this(new DownloadService()) { }
+
         public DownloadController(IDownloadService download) {
             this._download = download;
         }

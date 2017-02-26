@@ -14,7 +14,9 @@ namespace EmployeesApplication.Controllers
     {
         private readonly  IEmployeeRepository _employee;
         private readonly IDownloadService _download;
-        public EmployeeController() : this(new EmployeeRespository(), new DownloadService()) { }
+
+        
+
         public EmployeeController(IEmployeeRepository employee, IDownloadService download)
         {
             this._employee = employee;

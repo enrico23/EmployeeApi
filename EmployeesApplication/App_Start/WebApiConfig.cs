@@ -6,6 +6,9 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using System.Web.Http.Cors;
+using Employees.Services;
+using Microsoft.Practices.Unity;
+using EmployeesApplication.Resolver;
 
 namespace EmployeesApplication
 {
@@ -17,6 +20,14 @@ namespace EmployeesApplication
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+
+            // Web API configuration and services
+            var container = new UnityContainer();
+            
+            container.RegisterType<IEmployeeRepository, EmployeeRespository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IDepartmentRepository, DepartmentRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IDownloadService, DownloadService>(new HierarchicalLifetimeManager());
+            config.DependencyResolver = new UnityResolver(container);
 
             // Web API routes
             config.MapHttpAttributeRoutes();

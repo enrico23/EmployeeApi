@@ -10,9 +10,7 @@ namespace EmployeesApplication.Controllers
     public class DepartmentController : ApiController
     {
         private readonly IDepartmentRepository _department;
-        public DepartmentController() : this(new DepartmentRepository())
-        { 
-        }
+        
         public DepartmentController(IDepartmentRepository department) {
             this._department = department;
         }
