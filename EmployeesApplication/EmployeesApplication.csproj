@@ -225,7 +225,7 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Services\BasicAuthenticationAttribute.cs" />
-    <Compile Include="Services\EmployeeSecurity.cs" />
+    <Compile Include="Services\EmployeeApplicationSecurity.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>

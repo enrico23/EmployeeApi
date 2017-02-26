@@ -26,7 +26,7 @@ namespace EmployeesApplication.Services
                 string username = decodedTokenArray[0];
                 string password = decodedTokenArray[1];
 
-                var login = EmployeeSecurity.Login(username, password);
+                var login = EmployeeApplicationSecurity.Login(username, password);
                 if (login)
                 {
                     Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(username),null);

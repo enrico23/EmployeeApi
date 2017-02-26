@@ -7,7 +7,7 @@ using System.Web;
 
 namespace EmployeesApplication.Services
 {
-    public class EmployeeSecurity
+    public class EmployeeApplicationSecurity
     {
         public static bool Login(string username, string password) {
             using (EmployeeDbContext db = new EmployeeDbContext())
