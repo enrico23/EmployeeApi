@@ -315,8 +315,12 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Employees.DAL\Employees.DAL.csproj">
+      <Project>{85194150-5eab-4d60-926d-a214739e7d38}</Project>
+      <Name>Employees.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Employees.Models\Employees.Models.csproj">
-      <Project>{251ed886-a091-456a-b253-30655f6316eb}</Project>
+      <Project>{20078a0e-b9fa-4bbe-97a3-85e7a9ab6c3e}</Project>
       <Name>Employees.Models</Name>
     </ProjectReference>
   </ItemGroup>

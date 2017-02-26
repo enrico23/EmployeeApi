@@ -1,4 +1,5 @@
-﻿using Employees.Models;
+﻿using Employees.DAL;
+using Employees.Models;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System;
@@ -10,7 +11,7 @@ using System.Web;
 namespace EmployeesApplication.Services
 {
     public class EmployeeRespository: 
-        GenericRepository<EmployeeDbEntities, Employee>, 
+        GenericRepository<EmployeeDbContext, Employee>, 
         IEmployeeRepository
     {
         public IEnumerable<Employee> SelectByGender(string gender) {

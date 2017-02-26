@@ -1,4 +1,5 @@
-﻿using Employees.Models;
+﻿using Employees.DAL;
+using Employees.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ namespace EmployeesApplication.Services
 {
     
     public class DepartmentRepository : 
-        GenericRepository<EmployeeDbEntities, Department>, 
+        GenericRepository<EmployeeDbContext, Department>, 
         IDepartmentRepository
     {
     }
