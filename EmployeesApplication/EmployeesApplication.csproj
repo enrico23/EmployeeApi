@@ -256,7 +256,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="DataApp\app.js" />
     <Content Include="DataApp\home\home.html" />
+    <Content Include="DataApp\login\login.controller.js" />
     <Content Include="DataApp\login\login.html" />
+    <Content Include="DataApp\register\register.controller.js" />
     <Content Include="DataApp\register\register.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
