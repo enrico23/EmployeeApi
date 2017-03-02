@@ -35,5 +35,10 @@ namespace EmployeesApplication.Controllers
 
             return View();
         }
+
+        
+        public ActionResult DataApp() { 
+            return View(); 
+        }
     }
 }

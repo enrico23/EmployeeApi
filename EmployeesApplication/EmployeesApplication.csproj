@@ -312,6 +312,7 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Data.cshtml" />
+    <Content Include="Views\Home\DataApp.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

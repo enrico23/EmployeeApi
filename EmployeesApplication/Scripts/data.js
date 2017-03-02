@@ -1,6 +1,6 @@
 ﻿$(function () {
     if (sessionStorage.getItem('accessToken') == null) {
-        window.location.href = "/home/logi";
+        window.location.href = "/home/login";
     }
 
     $('#linkClose').click(function () {
