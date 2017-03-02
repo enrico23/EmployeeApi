@@ -14,10 +14,17 @@ namespace EmployeesApplication
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "DataApp",
+                url: "DataApp/",
+                defaults: new { controller = "Home", action = "DataApp" }
+                
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "EmployeesApplication.Controllers" }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                
             );
         }
     }

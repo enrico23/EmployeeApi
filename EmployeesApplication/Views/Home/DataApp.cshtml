@@ -2,10 +2,19 @@
 @section scripts{
     <script src="@Url.Content("~/Scripts/angular.min.js")"></script>
     <script src="@Url.Content("~/Scripts/angular-route.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/angular-cookies.min.js")"></script>
 
     <script src="@Url.Content("~/DataApp/app.js")"></script>
+    <script src="@Url.Content("~/DataApp/home/home.controller.js")"></script>
+    <script src="@Url.Content("~/DataApp/login/login.controller.js")"></script>
+    <script src="@Url.Content("~/DataApp/register/register.controller.js")"></script>
 }
-
+<p>&nbsp;</p>
+<p>
+    <a href="#!/">Home</a>&nbsp;|&nbsp;
+    <a href="#!/login">Login</a>&nbsp;|&nbsp;
+    <a href="#!/register">Register</a>
+</p>
 <div class="container" ng-app="app">
     <ng-view></ng-view>
 </div>

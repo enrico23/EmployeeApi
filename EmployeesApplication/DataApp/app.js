@@ -9,21 +9,21 @@
     function config($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                // controller: 'HomeController',
+                controller: 'HomeController',
                 templateUrl: '/dataapp/home/home.html',
                 controllerAs: 'vm'
             })
 
             .when('/login', {
-                // controller: 'LoginController',
+                controller: 'LoginController',
                 templateUrl: '/dataapp/login/login.html',
-                // controllerAs: 'vm'
+                controllerAs: 'vm'
             })
 
             .when('/register', {
-                // controller: 'RegisterController',
+                controller: 'RegisterController',
                 templateUrl: '/dataapp/register/register.html',
-                // controllerAs: 'vm'
+                controllerAs: 'vm'
             })
 
             .otherwise({ redirectTo: '/login' });
