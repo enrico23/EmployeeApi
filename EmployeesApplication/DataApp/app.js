@@ -1,7 +1,7 @@
 ﻿(function () {
     // console.log('app inizialised');
 
-    angular.module('app', ['ngRoute'])
+    angular.module('app', ['ngRoute', 'ngCookies'])
         .config(config);
 
 

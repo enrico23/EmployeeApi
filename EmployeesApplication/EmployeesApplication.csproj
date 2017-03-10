@@ -231,6 +231,7 @@
     <Compile Include="Controllers\DownloadController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -260,6 +261,7 @@
     <Content Include="DataApp\login\login.html" />
     <Content Include="DataApp\register\register.controller.js" />
     <Content Include="DataApp\register\register.html" />
+    <Content Include="DataApp\services\authentication.service.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
