@@ -6,29 +6,31 @@
         .module('app')
 	    .controller('LoginController', LoginController);
 
-    LoginController.$inject = [ 'logger'];
-    function LoginController(logger) {
-        //var vm = this;
+    LoginController.$inject = ['AuthenticationService'];
+    function LoginController(AuthenticationService) {
+        var vm = this;
         
-        //vm.login = login;
+        AuthenticationService.sayHello();
+
+        vm.login = login;
 
         //(function initController() {
         //    // reset login status
         //    AuthenticationService.ClearCredentials();
         //})();
 
-        //function login() {
-        //    vm.dataLoading = true;
-        //    //AuthenticationService.Login(vm.username, vm.password, function (response) {
-        //    //    if (response.success) {
-        //    //        AuthenticationService.SetCredentials(vm.username, vm.password);
-        //    //        $location.path('/');
-        //    //    } else {
-        //    //        FlashService.Error(response.message);
-        //    //        vm.dataLoading = false;
-        //    //    }
-        //    //});
-        //}
+        function login() {
+            vm.dataLoading = true;
+            //AuthenticationService.Login(vm.username, vm.password, function (response) {
+            //    if (response.success) {
+            //        AuthenticationService.SetCredentials(vm.username, vm.password);
+            //        $location.path('/');
+            //    } else {
+            //        FlashService.Error(response.message);
+            //        vm.dataLoading = false;
+            //    }
+            //});
+        }
     }
 
 })();

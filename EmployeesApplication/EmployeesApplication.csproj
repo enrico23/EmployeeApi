@@ -263,6 +263,7 @@
     <Content Include="DataApp\register\register.html" />
     <Content Include="DataApp\services\authentication.service.js" />
     <Content Include="DataApp\services\department.service.js" />
+    <Content Include="DataApp\services\logger.service.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

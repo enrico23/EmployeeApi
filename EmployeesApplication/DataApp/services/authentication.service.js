@@ -3,51 +3,110 @@
 
     angular
         .module('app')
-        .factory('AuthService', AuthService);
+        .factory('AuthenticationService', AuthenticationService);
+    AuthenticationService.$inject = ['$http', '$cookies', '$rootScope', '$timeout'];
+    function AuthenticationService($http, $cookies, $rootScope, $timeout) {
 
-    AuthService.$inject = [];
-    function AuthService() {
+        var service = {};
+        service.sayHello = sayHello;
+        service.Login = Login;
+        service.SetCredentials = SetCredentials;
+        service.ClearCredentials = ClearCredentials;
+        return service;
 
-        //var service = {};
+        function sayHello() {
+            console.log("say hello");
+        }
 
-        //service.Login = Login;
-        //service.SetCredentials = SetCredentials;
-        //service.ClearCredentials = ClearCredentials;
+        function Login(username, password, callback) {
+            $http.post('/api/authenticate', { username: username, password: password })
+                .success(function (response) {
+                    callback(response);
+                });
+        }
 
-        //return service;
+        function SetCredentials(username, password) {
+            var authdata = btoa(vm.username + ':' + vm.password);
 
-        //function Login(username, password, callback) {
-        //    $http.post('/api/authenticate', { username: username, password: password })
-        //        .success(function (response) {
-        //            callback(response);
-        //        });
-        //}
+            $rootScope.globals = {
+                currentUser: {
+                    username: username,
+                    authdata: authdata
+                }
+            };
 
-        //function SetCredentials(username, password) {
-        //    var authdata = btoa(vm.username + ':' + vm.password);
+            // set default auth header for http requests
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata;
 
-        //    $rootScope.globals = {
-        //        currentUser: {
-        //            username: username,
-        //            authdata: authdata
-        //        }
-        //    };
+            // store user details in globals cookie that keeps user logged in for 1 week (or until they logout)
+            var cookieExp = new Date();
+            cookieExp.setDate(cookieExp.getDate() + 7);
+            $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });
+        }
 
-        //    // set default auth header for http requests
-        //    $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata;
- 
-        //    // store user details in globals cookie that keeps user logged in for 1 week (or until they logout)
-        //    var cookieExp = new Date();
-        //    cookieExp.setDate(cookieExp.getDate() + 7);
-        //    $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });
-        //}
-        
-        //function ClearCredentials() {
-        //    $rootScope.globals = {};
-        //    $cookies.remove('globals');
-        //    $http.defaults.headers.common.Authorization = 'Basic';
-        //}
+        function ClearCredentials() {
+            $rootScope.globals = {};
+            $cookies.remove('globals');
+            $http.defaults.headers.common.Authorization = 'Basic';
+        }
+
+
     }
+})();
 
 
-});
+
+
+//(function () {
+//    'use strict';
+
+//    angular
+//        .module('app')
+//        .factory('AuthService', AuthService);
+
+//    AuthService.$inject = [];
+//    function AuthService() {
+
+//        var service = {};
+
+//        //service.Login = Login;
+//        //service.SetCredentials = SetCredentials;
+//        //service.ClearCredentials = ClearCredentials;
+
+//        return service;
+
+//        //function Login(username, password, callback) {
+//        //    $http.post('/api/authenticate', { username: username, password: password })
+//        //        .success(function (response) {
+//        //            callback(response);
+//        //        });
+//        //}
+
+//        //function SetCredentials(username, password) {
+//        //    var authdata = btoa(vm.username + ':' + vm.password);
+
+//        //    $rootScope.globals = {
+//        //        currentUser: {
+//        //            username: username,
+//        //            authdata: authdata
+//        //        }
+//        //    };
+
+//        //    // set default auth header for http requests
+//        //    $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata;
+ 
+//        //    // store user details in globals cookie that keeps user logged in for 1 week (or until they logout)
+//        //    var cookieExp = new Date();
+//        //    cookieExp.setDate(cookieExp.getDate() + 7);
+//        //    $cookies.putObject('globals', $rootScope.globals, { expires: cookieExp });
+//        //}
+        
+//        //function ClearCredentials() {
+//        //    $rootScope.globals = {};
+//        //    $cookies.remove('globals');
+//        //    $http.defaults.headers.common.Authorization = 'Basic';
+//        //}
+//    }
+
+
+//});
