@@ -264,6 +264,8 @@
     <Content Include="Content\bootstrap-social-gh-pages\index.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="DataApp\app.js" />
     <Content Include="DataApp\home\home.html" />
     <Content Include="DataApp\login\login.controller.js" />
@@ -274,6 +276,7 @@
     <Content Include="DataApp\services\department.service.js" />
     <Content Include="DataApp\services\logger.service.js" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\angular\angular-animate.js" />
@@ -353,6 +356,11 @@
     <Content Include="Content\bootstrap-social-gh-pages\LICENSE" />
     <Content Include="Content\bootstrap-social-gh-pages\package.json" />
     <Content Include="Content\bootstrap-social-gh-pages\README.md" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jqueryAuth\data.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />

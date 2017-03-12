@@ -22,6 +22,8 @@ namespace EmployeesApplication
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.min.css",
+                      "~/Content/bootstrap-social-gh-pages/bootstrap-social.css",
                       "~/Content/site.css"));
         }
     }
