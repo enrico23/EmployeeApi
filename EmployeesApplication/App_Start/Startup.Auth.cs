@@ -59,11 +59,11 @@ namespace EmployeesApplication
             //    appId: "",
             //    appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "612126778780-779gvs7sjirpuc19dlj6lrhmqlg94dj0.apps.googleusercontent.com",
+                ClientSecret = "nJrGUT-BVxpArJdFIlE9pj3L"
+            });
         }
     }
 }

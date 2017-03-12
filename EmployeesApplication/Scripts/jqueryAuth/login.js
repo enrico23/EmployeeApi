@@ -4,6 +4,15 @@
         $('#divError').hide();
     });
 
+    $('.btn-google').click(function () {
+        // console.log('google');
+        window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost%3A45208%2Fhome%2Flogin&state=P31ESED3RO1UzOfSP9NMjTZulsWrVVWvaTL_Jk5GmwI1";
+
+    });
+    $('.btn-facebook').click(function () {
+        // console.log('facebook');
+    });
+
     $('#btnLogin').click(function () {
         var username = $('#txtUsername').val();
         var  password = $('#txtPassword').val();
