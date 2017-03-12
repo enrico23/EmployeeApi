@@ -253,6 +253,15 @@
       <DependentUpon>EmployeeDb.mdf</DependentUpon>
     </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\css\bootstrap.css" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\css\docs.css" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\css\font-awesome.css" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\img\bootstrap-social.png" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\js\docs.js" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\js\jquery.js" />
+    <Content Include="Content\bootstrap-social-gh-pages\bootstrap-social.css" />
+    <Content Include="Content\bootstrap-social-gh-pages\index.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="DataApp\app.js" />
@@ -331,6 +340,19 @@
     <Content Include="Scripts\angular\angular.min.js.map" />
     <Content Include="DataApp\home\home.controller.js" />
     <Content Include="DataApp\services\employee.service.js" />
+    <Content Include="Content\bootstrap-social-gh-pages\.editorconfig" />
+    <Content Include="Content\bootstrap-social-gh-pages\.gitignore" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\bootstrap-social-gh-pages\assets\fonts\FontAwesome.otf" />
+    <Content Include="Content\bootstrap-social-gh-pages\bootstrap-social.less" />
+    <Content Include="Content\bootstrap-social-gh-pages\bootstrap-social.scss" />
+    <Content Include="Content\bootstrap-social-gh-pages\bower.json" />
+    <Content Include="Content\bootstrap-social-gh-pages\LICENSE" />
+    <Content Include="Content\bootstrap-social-gh-pages\package.json" />
+    <Content Include="Content\bootstrap-social-gh-pages\README.md" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jqueryAuth\data.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
