@@ -1,4 +1,5 @@
 ﻿$(function () {
+    getAccessToken();
 
     $('#linkClose').click(function () {
         $('#divError').hide();
