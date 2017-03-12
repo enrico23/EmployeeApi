@@ -21,8 +21,13 @@
             },
             
             success: function (response) {
-                sessionStorage.setItem("accessToken", response.access_token);
-                window.location.href = "/home/data/";
+                // console.log(JSON.stringify(response));
+               localStorage.setItem("accessToken", response.access_token);
+               localStorage.setItem("userName", response.userName);
+               window.location.href = "/home/data/";
+
+                
+               
             },
            
             error: function (jqXHR) {

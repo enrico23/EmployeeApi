@@ -1,5 +1,8 @@
 ﻿$(function () {
-    if (sessionStorage.getItem('accessToken') == null) {
+    //console.log(localStorage.getItem("userName"));
+    $(".user-identity").text("Welcome " +  localStorage.getItem("userName"));
+
+    if (localStorage.getItem('accessToken') == null) {
         window.location.href = "/home/login";
     }
 
@@ -16,7 +19,7 @@
             url: '/api/departments',
             method: 'GET',
             headers: {
-                'Authorization': 'Bearer ' + sessionStorage.getItem("accessToken")
+                'Authorization': 'Bearer ' + localStorage.getItem("accessToken")
             },
             success: function (data) {
                 console.log(data);
@@ -44,7 +47,7 @@
     });
 
     $('#btnLogoff').click(function () {
-        sessionStorage.removeItem('accessToken');
+        localStorage.removeItem('accessToken');
         window.location.href = "/home/login";
     });
 });
